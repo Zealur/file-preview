@@ -1,3 +1,8 @@
+@themeBgColor1: #03A9F4;
+@themeBgColor2: white;
+@themeFgColor1: #424242;
+@themeFgColor2: white;
+
 *{
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@ nav{
     top:0;
     left:0;
     position: fixed;
-    background: white;
+    background: @themeFgColor2;
     width:100vw;
     height: 6vh;
     max-height: 150px;
@@ -19,14 +24,41 @@ nav{
         bottom: 0;
         right: 0;
         width: 70vw;
-        font-family: 'Artifika', serif;
         li{
             display: flex;
             width: 25%;
             height: 50px;
-            float:left;
+            float: left;
             justify-content: center;
             align-items: center;
+            box-sizing: border-box;
+            background: @themeBgColor2;
+            color:@themeFgColor1;
+            outline: none;
+            &:hover{
+                background: @themeBgColor1;
+                cursor:pointer;
+            } 
+            a{
+                display: flex;
+                font-family: 'Artifika', serif;
+                font-size: 17px;
+                width: 100%;
+                height: 100%;
+                font-style: oblique; 
+                justify-content: center;
+                align-items: center;
+                border:none;
+                text-decoration: none;
+                &:visited{
+                    text-decoration: none;
+                    color: inherit;
+                }
+                &:hover{
+                    color: @themeFgColor2;
+                }
+                
+            }
         }
     }
 }
