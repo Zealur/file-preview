@@ -1,37 +1,102 @@
 @clockFgColor: #DBDBDB;
-
+@CoolBlackBG: #091D37;
+@CoolBlueFG: #157CCD;
 *{
     margin: 0;
     padding: 0;
+    &:focus{
+        outline: none;
+    }
 }
 body{
     main{
         width: 100vw;
         height: 100vh;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
-        
         align-items: center;
         background: url(background.jpg) no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;   
-
         #clock{
-
             color: @clockFgColor;
             font-family: 'Roboto', cursive;
             font-weight: 100;
             font-size: 80px;
-            padding: 5px 15px;
+            margin-top:50px;
+            padding: 5px 25px;
             border-radius: 15px;
-            text-shadow: 2px 0px 2px black, -2px 0px 2px black, 0px 2px 2px black, 0px -2px 2px black;
+            text-shadow: 1px 0px 1px black, -1px 0px 1px black, 0px 1px 1px black, 0px -1px 1px black;
+           
+            background: @CoolBlackBG;
+            border-radius: 15px;
+            border:1px solid @CoolBlueFG;
+
+            opacity: 0.7;
+
+            transition-duration: 0.5s;
+            &:hover{
+                transform: scale(1.05);
+                transition-duration: border 0.5s;
+                opacity: 1;
+            }
+            &:after{
+                line-height: 50px;
+                vertical-align: text-top; 
+                margin-left: 10px;
+                font-size: 35px;
+                content: attr(data-content);
+            }
         }
         #date{
             #clock;
+            margin-top: 15px;
             font-size: 40px;
+            &:after{
+                content: none;
+            }
+        }
+        #search-bar{
+            margin-top:50px;
+            float: left;
+            opacity: 0.75;
+            transition: 0.5s;
+            &:hover{
+                transform: scale(1.05);
+                transition-duration: border 0.5s;
+                opacity: 1;
+            }
+            #search-box{
+                float: left;
+                background-color: @CoolBlackBG;
+                border:3px solid #0F325D;
+                border-radius: 10px 0px 0px 10px;
+                height: 45px;
+                color: @clockFgColor;
+                font-size: 25px;
+                box-sizing: border-box;
+                padding-left: 10px;
+            }
+            #search-button{
+                float: left;
+                width:45px;
+                height: 45px;
+                background-color: @CoolBlackBG;
+                border:3px solid #0F325D;
+                border-left: none;
+                border-radius: 0px 10px 10px 0px;
+                box-sizing: border-box;
+                &:hover{
+                    cursor: pointer;
+                }
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
         }
     }
 }
