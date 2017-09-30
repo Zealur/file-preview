@@ -1,8 +1,26 @@
-<hmtl>
+<!DOCTYPE html>
+<html lang="pl">
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <title>Strona startowa</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Artifika|Lemonada|Roboto:100,300,400,500" rel="stylesheet">
     </head>
     <body>
-        <p>Testy 1234</p>
+        <main>
+            <p id="clock"></p>       
+            <p id="date">Sobota 30.09.07</p>
+            <input id="search-box" type="text"/>
+        </main>
+        <script src="script.js"></script>
+        <script language="Javascript" type="text/javascript"> 
+        //
+        // Create a search control 
+        var searchControl = new GSearchControl(); // create a search object 
+        searchControl.addSearcher(new GwebSearch()); // tell Google where to draw the searchbox 
+        searchControl.draw(document.getElementById("search-box")); 
+        GSearch.setOnLoadCallback(OnLoad); //
+   
+    </script>
     </body>
-</hmtl>
+</html>
