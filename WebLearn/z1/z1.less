@@ -2,6 +2,8 @@
 @themeBgColor2: white;
 @themeFgColor1: #424242;
 @themeFgColor2: white;
+@cellBgColor1: #061324;
+@cellBgColor2: #0D96F5;
 
 *{
     margin: 0;
@@ -68,9 +70,9 @@ main{
     div{
         max-width:100vw;
         height: 100vh;
-        -webkit-box-shadow: inset 0px 8px 10px -4px rgba(0,0,0,0.75);
-        -moz-box-shadow: inset 0px 8px 10px -4px rgba(0,0,0,0.75);
-        box-shadow: inset 0px 8px 10px -4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: inset 0px 6px 5px -2px rgba(0,0,0,0.75);
+        -moz-box-shadow: inset 0px 5px 6px -2px rgba(0,0,0,0.75);
+        box-shadow: inset 0px 5px 6px -2px rgba(0,0,0,0.75);
         &:nth-child(even){
             background: white;
         }
@@ -78,6 +80,7 @@ main{
     #logo-section{
         display: flex;
         justify-content: center;
+        flex-direction: column;
         align-items: center;
         background: url(pexels-photo-298724.jpeg) no-repeat center center fixed;
         -webkit-background-size: cover;
@@ -85,13 +88,65 @@ main{
         -o-background-size: cover;
         background-size: cover;
         h1{
+            display: block;
             color:white;
             font-size:80px;
             text-shadow: 4px 4px black;
-        }    
+            border-bottom:4px solid @cellBgColor2;
+            padding: 0px 20px;
+        }   
+        button{
+            display: block;
+            border-radius: 15px;
+            border: none;
+            background: @cellBgColor2;
+            font-family:'Lemonada', cursive;
+            color: @themeFgColor2;
+            height: 50px;
+            width: 140px;
+            margin-top: 45px;
+            text-transform: uppercase;
+            &:hover{
+                color: @cellBgColor2;  
+                background: @themeBgColor2;  
+                cursor: pointer;
+            }
+        } 
     }
     #info-section{
-        background-color:#EDE9E6;
+        height: auto;
+        padding: 30px 10px;
+        background-color: @themeBgColor2;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        .cell{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            -webkit-box-shadow: 3px 8px 10px 4px rgba(0,0,0,0.75);
+            -moz-box-shadow: 3px 8px 10px 4px rgba(0,0,0,0.75);
+            box-shadow: 0.5px 0.5px 3px 0.5px rgba(0,0,0,0.75);
+            background: @themeBgColor2;
+            height: 10vh;
+            margin:0px 15px;
+            text-align: center;
+            border-radius: 7px;
+            padding: 0px 50px;
+            p{
+                font-size: @themeFgColor1;
+            }
+            &:nth-child(odd){
+                background-color: @cellBgColor1;
+                color: @themeFgColor2;
+            }
+            &:nth-child(even){
+                background-color: @cellBgColor2;
+                color: @themeFgColor2;
+            }
+        } 
     }
     #location-section{
          background: url(pexels-photo-311065.jpeg) no-repeat center center fixed;
