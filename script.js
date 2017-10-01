@@ -34,7 +34,7 @@ function UpdateClock(){
 function UpdateDate(){
     var date = new Date();
     document.getElementById("date").textContent = TranslateWeekDay(date.getDay())
-        + " " + date.getDate() + "." + ('0' + (date.getMonth()+1)).slice(-2) + "." + date.getFullYear();
+        + " " + ('0' + date.getDate()).slice(-2).toString() + "." + ('0' + (date.getMonth()+1)).slice(-2) + "." + date.getFullYear();
 }
 
 function TranslateWeekDay(dayNumber){
