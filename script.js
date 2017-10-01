@@ -1,7 +1,6 @@
 
 Init();
 
-
 function UpdateFocusedSearchBar(){
     if(document.getElementById("search-box") === document.activeElement || document.getElementById("search-button") === document.activeElement){
         document.getElementById("search-bar").style.opacity = 1;
@@ -52,7 +51,7 @@ function TranslateWeekDay(dayNumber){
             return "Piątek";
         case 6:
             return "Sobota";
-        case 7:
+        case 0:
             return "Niedziela";
         default:
             break;
