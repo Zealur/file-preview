@@ -1,0 +1,10 @@
+CSS Metodology: BEM
+Printable
+Fully responsive
+Support: Chrome, Firefox, Opera, Edge
+Fonts: max 2
+page speed insight 
+PreProcessor: LESS
+Task Runner: Gulp/Grunt
+Packet Manager: npm
+Developer Tools: Chrome/Mozilla/Firebug

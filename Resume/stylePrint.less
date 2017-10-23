@@ -1,0 +1,35 @@
+/* Theme Colors */
+@ThemeBgColor: #00A1E1;
+@DarkBgColor: #3A3939;
+@LightFontColor: #DADADA;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: @LightFontColor;
+}
+body{
+    background: @DarkBgColor;
+    margin: 50px 0;
+    width: 100vw;
+}
+main{
+    background: @ThemeBgColor;
+    height: 200px;
+    color:@DarkBgColor;
+    font-size: 55px;
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 80px 100vw 0 0;
+    border-color: @ThemeBgColor transparent transparent transparent;
+}
+.aa{
+    background: @DarkBgColor;
+    height: 600px;
+}
