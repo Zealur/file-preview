@@ -177,7 +177,8 @@
     border-top: 1px solid #0096FF;
   }
   .footer .footer-text {
-    font-size: 80%;
+    height: 50px;
+    font-size: 12px;
   }
   .flat-icons {
     float: right;
