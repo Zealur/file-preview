@@ -321,6 +321,7 @@
     padding: 1vw 0 1vw 12vw;
     font-size: 3vw;
     text-decoration: none;
+    color: #3A3939;
   }
   .header__site:visited {
     color: #3A3939;
@@ -336,7 +337,7 @@
     border-color: #0096FF transparent transparent transparent;
   }
   .main-section {
-    padding: 5% 0 0 0;
+    padding: 5% 0 5% 0;
     box-sizing: border-box;
     float: left;
     width: 100vw;
@@ -380,7 +381,7 @@
   .skill {
     display: flex;
     height: auto;
-    padding: 12% 0 0 0;
+    padding: 5vw 0 2.5vw 0;
   }
   .skill-left {
     float: left;
@@ -394,7 +395,7 @@
     width: 100%;
   }
   .skill__title {
-    font-size: 20px;
+    font-size: 3vw;
     padding: 0 0 0 5%;
     width: 85%;
     font-weight: 500;
@@ -404,11 +405,11 @@
     width: 85%;
     color: #DF1E83;
     font-weight: 500;
-    font-size: 17px;
+    font-size: 3vw;
   }
   .skill__description {
     width: 85%;
-    font-size: 14px;
+    font-size: 2.5vw;
     color: #A7A7A7;
     font-weight: 300;
     padding: 0 5% 0 5%;
@@ -426,7 +427,7 @@
     border-top: 1px solid #0096FF;
   }
   .footer .footer-text {
-    font-size: 80%;
+    font-size: 2vw;
   }
   .flat-icons {
     float: right;
