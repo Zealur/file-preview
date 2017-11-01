@@ -1,7 +1,13 @@
 /* Theme Colors */
-@ThemeBgColor: #00A1E1;
+@ThemeBgColor: #0096FF;
+@ThemeColor: #DF1E83;
 @DarkBgColor: #3A3939;
-@LightFontColor: #DADADA;
+@FontMainColor: #333;
+@FontLighterColor: #333;
+@FontGrayColor: #333;
+
+/* Fonts */
+@FontFamilyMain: 'Roboto', cursive; 
 
 *{
     margin: 0;
@@ -9,27 +15,187 @@
 }
 
 html{
-    background: @LightFontColor;
+    background: url("background.png");
 }
 body{
     background: @DarkBgColor;
-    margin: 50px 0;
-    width: 100vw;
+    margin: 50px auto;
+    //height: 297mm;
+    width: 210mm;
 }
-main{
+.fa{
+    margin-right: 5px;
+}
+.left-section{
+    float: left;
+    width: 50%;
+}
+.right-section{
+    opacity: 1;
+    .left-section;
+}
+.header{
     background: @ThemeBgColor;
-    height: 200px;
+    height: 250px;
     color:@DarkBgColor;
+    font-family: @FontFamilyMain;
+}
+.header__title{
+    box-sizing: border-box;
+    padding: 45px 0 0 70px;
     font-size: 55px;
+    &::after{
+        content: ",";
+        color: @ThemeColor;
+    }
 }
+.header__name{
+    box-sizing: border-box;
+    padding: 10px 0 0 70px;
+    font-size: 30px;
+    font-weight: 300;
+}
+.header__profession{
+    .header__name;
+    font-size: 17px;
+    padding: 5px 0 0 70px;
+}
+.header__email{
+    padding: 25px 0 5px 80px;
+    font-size: 12px;
+}
+.header__phone{
+    padding: 5px 0 5px 80px;
+    font-size: 12px;
+}
+.header__site{
+    .header__phone;
+    z-index: 2;
+    text-decoration: none;
+    &:visited{
+        color: @DarkBgColor;
+    }
+    &:hover{
+        color:@FontLighterColor;
+    }
+}
+.header__photo{
+    padding: 18% 0 0 50%;
+    color: @ThemeBgColor;
+}
+
 .triangle{
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 80px 100vw 0 0;
-    border-color: @ThemeBgColor transparent transparent transparent;
+    width: 100vw;
+    height: 30px;
+    border-bottom: 1px solid @ThemeBgColor;
 }
-.aa{
-    background: @DarkBgColor;
-    height: 600px;
+
+.main-section{
+    padding: 5% 0 0 0;
+    box-sizing: border-box;
+    float: left;
+    width: 50%;
+    color: @FontMainColor;
+    font-family: @FontFamilyMain;
+    font-size: 20px;
+    &:first-child{
+        padding-left: 10%;
+        padding-right: 2%;
+    }
 }
+.main-section__title{
+    font-weight: 300;
+}
+.details{
+    padding: 5% 0 10% 0;
+}
+.details__paragraph{
+    font-size: 17px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+.details__paragraph--timespan{
+    color:@FontGrayColor;
+    margin-left: -30px;
+}
+.details__paragraph--company{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.details__paragraph--job{
+    color:@ThemeColor;
+    font-weight: 500;
+}
+.details__paragraph--description{
+    font-size: 14px;
+    font-weight: 300;
+    color:@FontGrayColor;
+}
+
+.skill{
+    display: flex;
+    height: auto;
+    padding: 12% 0 0 0;
+}
+.skill-left{
+    float: left;
+    width: 15%;
+}
+.skill-right{
+    float: left;
+    width:85%;
+}
+.skill__icon{
+    width:100%;
+}
+.skill__title{
+    font-size: 20px;
+    padding: 0 0 0 5%;
+    width: 85%;
+    font-weight: 500;
+}
+.skill__tags{
+    padding: 0 0 0 5%;
+    width: 85%;
+    color:@ThemeColor;
+    font-weight: 500;
+    font-size: 17px; 
+}
+.skill__description{
+    width: 85%;
+    font-size: 14px;
+    color:@FontGrayColor;
+    font-weight: 300;
+    padding: 0 5% 0 5%;
+}
+
+.footer{
+    box-sizing: border-box;
+    display: block;
+    width: 210mm;
+    padding: 2% 5% 2% 5%;
+    margin-top: 50px;
+    clear: both;
+    font-family: @FontFamilyMain;
+    color: @FontGrayColor;
+    //font-size: 12px;
+    text-align: center;
+    border-top: 1px solid @ThemeBgColor;
+    .footer-text{
+        height: 30px;
+        font-size: 12px;   
+    }
+}
+.flat-icons{
+    float:right;
+    clear: both;
+    color: @ThemeBgColor;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: @FontFamilyMain;
+    margin-right: 45px;
+    text-align: right;
+}
+
+
