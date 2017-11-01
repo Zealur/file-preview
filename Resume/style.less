@@ -301,11 +301,12 @@
         font-size: 3vw;
     }
     .header__phone{
-        padding: 1vw 0 1vw 12vw;
+        padding: 0.5vw 0 0 12vw;
         font-size: 3vw;
     }
     .header__site{
         .header__phone;
+        display: block;
         text-decoration: none;
         color: @DarkBgColor;
         &:visited{
@@ -325,7 +326,7 @@
     }
 
     .main-section{
-        padding: 5% 0 5% 0;
+        padding: 0 0 5% 0;
         box-sizing: border-box;
         float: left;
         width: 100vw;
@@ -334,6 +335,9 @@
         font-size: 20px;
         padding-left: 10%;
         padding-right: 10%;
+        &:first-child{
+            padding-top: 5%;
+        }
     }
     .main-section__title{
         font-weight: 300;
