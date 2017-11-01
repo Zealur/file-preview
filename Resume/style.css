@@ -1,5 +1,24 @@
 /* Theme Colors */
 /* Fonts */
+/* Animations */
+@keyframes EaseIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes EaseInTop {
+  0% {
+    margin-top: -25px;
+    opacity: 0;
+  }
+  100% {
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -15,6 +34,11 @@
     -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    animation-name: EaseIn;
+    animation-delay: 0.3s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .fa {
     margin-right: 5px;
@@ -37,6 +61,11 @@
     box-sizing: border-box;
     padding: 45px 0 0 70px;
     font-size: 55px;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 0.75s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .header__title::after {
     content: ",";
@@ -47,26 +76,53 @@
     padding: 10px 0 0 70px;
     font-size: 30px;
     font-weight: 300;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .header__profession {
     box-sizing: border-box;
     padding: 10px 0 0 70px;
     font-size: 30px;
     font-weight: 300;
+    animation-delay: 1s;
     font-size: 17px;
     padding: 5px 0 0 70px;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 1.4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .header__email {
     padding: 25px 0 5px 80px;
     font-size: 12px;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 1.8s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .header__phone {
     padding: 5px 0 5px 80px;
     font-size: 12px;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 1.8s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .header__site {
     padding: 5px 0 5px 80px;
     font-size: 12px;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 1.8s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 2;
     text-decoration: none;
   }
   .header__site:visited {
@@ -78,10 +134,16 @@
   .header__photo {
     padding: 18% 0 0 50%;
     color: #0078cc;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .triangle {
     width: 0;
     height: 0;
+    z-index: 0;
     border-style: solid;
     border-width: 100px 210mm 0 0;
     border-color: #0096FF transparent transparent transparent;
@@ -94,6 +156,11 @@
     color: white;
     font-family: 'Roboto', cursive;
     font-size: 20px;
+    opacity: 0;
+    animation-name: EaseInTop;
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
   }
   .main-section:first-child {
     padding-left: 10%;
@@ -191,7 +258,7 @@
     text-align: right;
   }
 }
-@media screen and (max-width: 224mm) {
+@media screen and (max-width: 225mm) {
   body {
     background: #3A3939;
     width: 100vw;
@@ -201,52 +268,58 @@
   }
   .left-section {
     float: left;
-    width: 50%;
+    width: 100vw;
   }
   .right-section {
+    display: none;
     float: left;
-    width: 50%;
+    width: 100vw;
   }
   .header {
     background: #0096FF;
-    height: 250px;
+    height: 60vw;
+    min-height: 240px;
+    max-height: 420px;
     color: #3A3939;
     font-family: 'Roboto', cursive;
   }
   .header__title {
+    display: flex;
     box-sizing: border-box;
-    padding: 45px 0 0 70px;
-    font-size: 55px;
+    padding: 25px 0 0 10vw;
+    font-size: 12vw;
   }
   .header__title::after {
     content: ",";
     color: #DF1E83;
   }
   .header__name {
+    display: flex;
     box-sizing: border-box;
-    padding: 10px 0 0 70px;
-    font-size: 30px;
+    padding: 10px 0 0 10vw;
+    font-size: 7vw;
     font-weight: 300;
   }
   .header__profession {
+    display: flex;
     box-sizing: border-box;
-    padding: 10px 0 0 70px;
-    font-size: 30px;
+    padding: 10px 0 0 10vw;
+    font-size: 7vw;
     font-weight: 300;
-    font-size: 17px;
-    padding: 5px 0 0 70px;
+    font-size: 4vw;
+    padding: 5px 0 0 10vw;
   }
   .header__email {
-    padding: 25px 0 5px 80px;
-    font-size: 12px;
+    padding: 25px 0 0 12vw;
+    font-size: 3vw;
   }
   .header__phone {
-    padding: 5px 0 5px 80px;
-    font-size: 12px;
+    padding: 1vw 0 1vw 12vw;
+    font-size: 3vw;
   }
   .header__site {
-    padding: 5px 0 5px 80px;
-    font-size: 12px;
+    padding: 1vw 0 1vw 12vw;
+    font-size: 3vw;
     text-decoration: none;
   }
   .header__site:visited {
@@ -255,47 +328,43 @@
   .header__site:hover {
     color: #DADADA;
   }
-  .header__photo {
-    padding: 18% 0 0 50%;
-    color: #0078cc;
-  }
   .triangle {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 100px 100vw 0 0;
+    border-width: 15vw 100vw 0 0;
     border-color: #0096FF transparent transparent transparent;
   }
   .main-section {
     padding: 5% 0 0 0;
     box-sizing: border-box;
     float: left;
-    width: 50%;
+    width: 100vw;
     color: white;
     font-family: 'Roboto', cursive;
     font-size: 20px;
-  }
-  .main-section:first-child {
     padding-left: 10%;
-    padding-right: 2%;
+    padding-right: 10%;
   }
   .main-section__title {
     font-weight: 300;
+    font-size: 6vw;
+    text-align: center;
   }
   .details {
-    padding: 5% 0 10% 0;
+    padding: 5vw 0 2vw 0;
   }
   .details__paragraph {
-    font-size: 17px;
+    font-size: 3vw;
     font-weight: 300;
     margin-bottom: 5px;
   }
   .details__paragraph--timespan {
     color: #A7A7A7;
-    margin-left: -30px;
+    margin-left: -5vw;
   }
   .details__paragraph--company {
-    font-size: 20px;
+    font-size: 3vw;
     font-weight: 500;
     margin-bottom: 2px;
   }
@@ -304,7 +373,7 @@
     font-weight: 500;
   }
   .details__paragraph--description {
-    font-size: 14px;
+    font-size: 2.5vw;
     font-weight: 300;
     color: #A7A7A7;
   }
