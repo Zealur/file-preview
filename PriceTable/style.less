@@ -1,0 +1,167 @@
+@pageBgColor: #E2DDF0;
+@cardBgColor: white;
+@fontColor: white;
+@cardBasicBgColor: #FE4F92;
+@cardProBgColor: #7B6DFB;
+@cardTeamBgColor: #4FBEFE;
+@fontFamily: 'Roboto', cursive; 
+
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    background-color: @pageBgColor;
+}
+.price-cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: @fontFamily;
+}
+.price-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: @cardBgColor;
+    width: 170px;
+    min-width: 170px;
+    margin: 50px;
+    border: 3px solid @cardBgColor;
+    border-radius: 55px;
+    overflow: hidden;
+    padding: 30px 30px 10px 30px;
+    color: @fontColor;
+    z-index: 1;
+}
+.price-card__triangle{
+    top:0;
+    left: 0;
+    width: 0;
+    position: absolute;
+    height: 0;
+    border-style: solid;
+    border-width: 130px 280px 0 0;
+    border-color: white transparent transparent transparent;
+    z-index: 0;
+}
+.card-basic{
+    background-color: @cardBasicBgColor;
+    -webkit-box-shadow: 0px 0px 150px 10px @cardBasicBgColor;
+    -moz-box-shadow: 0px 0px 150px 10px @cardBasicBgColor;
+    box-shadow: 0px 0px 150px 10px @cardBasicBgColor;
+}
+.card-pro{
+    background-color: @cardProBgColor;
+    -webkit-box-shadow: 0px 0px 150px 10px @cardProBgColor;
+    -moz-box-shadow: 0px 0px 150px 10px @cardProBgColor;
+    box-shadow: 0px 0px 150px 10px @cardProBgColor;
+}
+.card-team{
+    background-color: @cardTeamBgColor;
+    -webkit-box-shadow: 0px 0px 150px 10px @cardTeamBgColor;
+    -moz-box-shadow: 0px 0px 150px 10px @cardTeamBgColor;
+    box-shadow: 0px 0px 150px 10px @cardTeamBgColor;
+}
+
+.price-card__icon{
+    z-index: 1;
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+}
+.price-card__icon--basic{
+    color: darken(@cardBasicBgColor,10%);
+}
+.price-card__icon--pro{
+    color: darken(@cardProBgColor,4%);
+}
+.price-card__icon--team{
+    color: darken(@cardTeamBgColor,10%);
+}
+.price-card__name{
+    margin-top: 85px;
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2.5px;
+    margin-bottom: 5px;
+}
+.price-card__cost{
+    text-transform: uppercase;
+    text-align: center;
+    align-self: center;
+    width: 100px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 25px;
+    margin-bottom: 3px;
+    letter-spacing: 2.5px;
+    font-weight: 400;
+    padding: 1px;
+}
+.price-card__period{
+    align-self: center;
+    color: black;
+    opacity: 0.4;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.price-card-list{
+    list-style: none;
+    margin-bottom: 15px;
+    height: 130px;
+}
+.price-card-list__element{
+    font-size: 11px;
+    font-weight: 400;
+    font-style:italic;
+    margin-bottom: 10px;
+    &:before{
+        content: "• ";
+        font-size: 15px;
+        font-weight: 500;
+        color: rgba(0,0,0,0.15);
+    }
+}
+
+.price-card__signup{
+    text-transform: uppercase;
+    background: white;
+    border:none;
+    font-size:12px;
+    border-radius: 35px;
+    height: 35px;
+    width: 150px;
+    align-self: center;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.price-card__signup--basic{
+    .price-card__signup;
+    color:@cardBasicBgColor;
+}
+.price-card__signup--pro{
+    .price-card__signup;
+    color:@cardProBgColor;
+}
+.price-card__signup--team{
+    .price-card__signup;
+    color:@cardTeamBgColor;
+}
+.price-card__info{
+    align-self: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    opacity: 0.8;
+}
