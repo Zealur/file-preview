@@ -134,7 +134,7 @@ setInterval(function(){
 },7500);
 
 function refresh(){
-    var data = JSON.parse(httpGet("http://temperapp.apphb.com/api/all"));
+    var data = JSON.parse(httpGet("https://temperapp.apphb.com/api/all"));
     console.log(data);
     
     refreshView(data);
