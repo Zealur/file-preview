@@ -1,0 +1,121 @@
+@gradientf1: rgba(0, 198, 255, 0.95);
+@gradientt1: rgba(0, 114, 255, 0.95);
+@gradientf2: rgba(183, 4, 199, 0.95);
+@gradientt2: rgba(82, 11, 248, 0.95);
+@gradientf3: rgba(255, 147, 52, 0.95);
+@gradientt3: rgba(226, 70, 107, 0.95);
+@gradientf4: rgba(231, 76, 60, 0.95);
+@gradientt4: rgba(255, 51, 102, 0.95);
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+@keyframes flow{
+    0%{
+        transform: skewY(1deg);
+    }
+    50%{
+        transform: skewY(-1deg);
+    }
+    100%{
+        transform: skewY(1deg);
+    }
+}
+
+@keyframes chicky{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0.95);
+        opacity: 0.75;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.gradient(@from, @to){
+    background:  rgba(0, 114, 255, 0.95); /* Old browsers */
+    background: -moz-linear-gradient(top, @from 0%,  @to 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, @from 0% @to 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, @from 0%, @to 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.color1{
+    .gradient(@gradientf1, @gradientt1);
+}
+.color2{
+    .gradient(@gradientf2, @gradientt2);
+}
+.color3{
+    .gradient(@gradientf3, @gradientt3);
+}
+.color4{
+    .gradient(@gradientf4, @gradientt4);
+}
+
+main{
+    background: gray;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.title{
+    animation: flow 4s infinite;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-top:5%;
+    img{
+        display: inline-block;
+        width: 15%;
+    }
+    p{
+        margin-left: 15px;
+        display: inline-block;
+        font-family: 'Pacifico', cursive;
+        color:white;
+        font-size: 9vw;
+        font-weight: 300;
+    }
+}
+
+.particles-js-canvas-el{
+    height: 100vh !important;
+}
+
+.heating{
+    display: none;
+}
+.heater-icon{
+    animation: chicky 2s infinite;
+    position: absolute;
+    width: 150px;
+    bottom:50px;
+    right: 50px;
+}
+
+.temp-container{
+    position: absolute;
+    bottom: 150px;
+    color: white;
+    left: 100px;
+    font-family: 'Pacifico', cursive;
+    font-weight: 500;
+    font-size: 35px;
+}
+.distance{
+    .temp-container;
+    bottom: 100px;
+}
