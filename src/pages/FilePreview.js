@@ -56,11 +56,6 @@ export default class FilePreview extends Component {
           <ul className="cards">
             <li className="card">
               <iframe className="card__preview" src={urlToPdf} />
-              <code className="code">
-                {`<iframe
-                  src="${urlToPdf}"
-                />`}
-              </code>
               <p className="card__caption">Inline embeding</p>
             </li>
             <li className="card">
