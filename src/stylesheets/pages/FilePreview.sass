@@ -6,9 +6,11 @@ body
     +box-shadow($color-black)
     background-color: $color-white
     border-radius: $m-xs
-    overflow: hidden
-    max-width: 1000px
     margin: 0 auto
+    max-width: 1000px
+    overflow: hidden
+    padding-bottom: $m-xl * 4
+    position: relative
 
 .article-header
     height: 280px
@@ -22,6 +24,8 @@ body
         position: relative
 
 .article-title
+    font-weight: $font-weight-regular
+    text-decoration: underline $brand-accent-1
     margin-bottom: $m
 
 .article-author
@@ -57,11 +61,47 @@ hr
 
 .header__background
     fill: $brand-primary
-    opacity: 0.4
+    opacity: 1
     position: absolute
     width: 1000px
     top: -1px
     left: 0
+
+    
+.footer__background
+    @extend .header__background
+    bottom: 0
+    top: auto
+
+.footer__wave2
+    @extend .footer__background
+    fill: $brand-secondary
+    opacity: .25
+
+.header__wave2
+    position: absolute
+    top: 0
+    left: 0
+    transform: rotate(180deg)
+    fill: $brand-secondary
+    opacity: 0.25
+    z-index: 0
+
+.header__shape1
+    fill: $brand-secondary
+    position: absolute
+    top: $m-xl * 3
+    left: $m-xl * 2
+    opacity: .15
+
+.header__shape2
+    @extend .header__shape1
+    fill: $brand-secondary
+    transform: rotate(200deg)
+    top: $m-xl * 4
+    left: auto
+    right: $m-xl * 3
+
 
 .references-list
     display: flex
@@ -103,4 +143,11 @@ hr
             text-align: center
             padding: $m-sm
 
+
+
+@keyframes floatX
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX($m)
 
