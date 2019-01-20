@@ -1,29 +1,62 @@
+body
+    background-image: url("./../images/funky-lines.png")
+    padding: $m 0
+
 .content
+    +box-shadow($color-black)
+    background-color: $color-white
+    border-radius: $m-xs
+    overflow: hidden
     max-width: 1000px
     margin: 0 auto
 
 .article-header
-    +box-shadow($color-gray-dark)
-    background: $color-white
-    border-radius: $m-xs
-    margin: $m-sm $m-sm 0 $m-sm
-    padding: $m-sm $m-xl
-    overflow: hidden
+    height: 280px
+    display: flex
+    flex-flow: column
+    justify-content: flex-end
+    text-align: center
+    padding: $m $m-xl
     position: relative
-    *
+    > *
         position: relative
 
 .article-title
     margin-bottom: $m
-    color: $brand-primary
 
 .article-author
     color: $color-gray-dark
     text-align: right
     margin-right: $m-xs
 
+.article__content
+    padding: 0 $m-xl
+
+    h3
+        color: $brand-accent-2
+        margin: $m-sm 0
+
+    ul
+        margin-left: $m
+        list-style: disc
+
+    .check, .times
+        fill: $brand-success
+        width: 20px
+        height: 20px
+        vertical-align: top
+
+    .times
+        fill: $brand-danger
+
+
+hr
+    border: none
+    border-top: 2px dashed $color-gray
+    margin: $m-lg 0
+
 .header__background
-    fill: $brand-secondary
+    fill: $brand-primary
     opacity: 0.4
     position: absolute
     width: 1000px
@@ -47,18 +80,22 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-around
+    margin-top: $m
 
     .card
         +box-shadow($color-gray-dark)
         background: $color-white
         border-radius: $m-xs
+        border: 1px solid $color-gray
         flex: 1 0 28% 
         margin: $m-sm
         min-width: 200px
         overflow: hidden
 
         &__preview
+            background-color: $color-gray
             border: 0
+            border-bottom: 2px solid $brand-accent-1
             height: 250px
             width: 100%
 

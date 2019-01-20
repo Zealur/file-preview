@@ -2,8 +2,13 @@ import React, { Component } from 'react'
 import { LinkedInIcon } from '../components/icons/LinkedInIcon'
 import { WaveBackground } from '../components/icons/WaveBackground'
 import { GitHubIcon } from '../components/icons/GitHubIcon'
+import { CheckIcon } from '../components/icons/CheckIcon'
+import { TimesIcon } from '../components/icons/TimesIcon'
 
-const urlToPdf = 'http://www.pdf995.com/samples/pdf.pdf'
+const urlToPdf =
+  'https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf'
+
+const urlToDoc= 'http://www.snee.com/xml/xslt/sample.doc'
 
 export default class FilePreview extends Component {
   render() {
@@ -52,11 +57,35 @@ export default class FilePreview extends Component {
             </li>
           </ul>
         </header>
+        <hr />
         <section className="article-section">
+          <div className="article__content">
+            <h3>Introduction</h3>
+            <p>This page is made for developers to check browser support for file embedding, and also to gather some information about this topic.</p>
+            <br />
+            <ul>
+              <h4>Sections:</h4>
+              <li><a href="#pdf">Embeding PDF file test</a></li>
+              <li><a href="#doc">Embeding DOC file test</a></li>
+            </ul>
+          </div>
+            <hr />
+            <div className="article__content">
+
+            <h3 id="pdf" name="pdf">Embeding PDF file test:</h3>
+            <p>
+              <ul>
+                <li><b>Browser default embeding</b> <CheckIcon className="check" /></li>
+                <li><b>Google Docs</b> - support, but likes to not display anything at all, just throws random errors, refresh this site a few times to check it on your own <CheckIcon className="check" /> / <TimesIcon className="times" /></li>
+                <li><b>Office Apps</b> - No support for pdf <TimesIcon className="times" /> </li>
+              </ul>
+            </p>
+          </div>
+
           <ul className="cards">
             <li className="card">
               <iframe className="card__preview" src={urlToPdf} />
-              <p className="card__caption">Inline embeding</p>
+              <p className="card__caption">Browser default embedding</p>
             </li>
             <li className="card">
               <iframe
@@ -65,7 +94,7 @@ export default class FilePreview extends Component {
                   urlToPdf
                 )}&embedded=true`}
               />
-              <p className="card__caption">Google docs</p>
+              <p className="card__caption">Google Docs</p>
             </li>
             <li className="card">
               <iframe
@@ -74,7 +103,45 @@ export default class FilePreview extends Component {
                   urlToPdf
                 )}`}
               />
-              <p className="card__caption">Inline pdf</p>
+              <p className="card__caption">Office Apps</p>
+            </li>
+          </ul>
+        </section>
+        <hr />
+        <section className="article-section">
+          <div className="article__content">
+            <h3 id="doc" name="doc">Embeding DOC file test:</h3>
+            <p>
+              <ul>
+                <li>Browser default embeding - forces download <TimesIcon className="times" /></li>
+                <li>Google Docs <CheckIcon className="check" /></li>
+                <li>Office Apps - No support for pdf <CheckIcon className="check" /></li>
+              </ul>
+            </p>
+          </div>
+
+          <ul className="cards">
+            <li className="card">
+              <iframe className="card__preview" src={urlToDoc} />
+              <p className="card__caption">Browser default embedding</p>
+            </li>
+            <li className="card">
+              <iframe
+                className="card__preview"
+                src={`https://docs.google.com/viewer?url=${encodeURI(
+                  urlToDoc
+                )}&embedded=true`}
+              />
+              <p className="card__caption">Google Docs</p>
+            </li>
+            <li className="card">
+              <iframe
+                className="card__preview"
+                src={`http://view.officeapps.live.com/op/view.aspx?src=${encodeURI(
+                  urlToDoc
+                )}`}
+              />
+              <p className="card__caption">Office Apps</p>
             </li>
           </ul>
         </section>
