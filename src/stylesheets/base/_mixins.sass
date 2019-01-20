@@ -1,0 +1,75 @@
+=animate($property...)
+  transition-property: $property
+  transition-duration: $transition-duration
+  transition-timing-function: $transition-function
+
+=box-shadow($color)
+  box-shadow: 0 5px 15px rgba($color, .2)
+
+=box-shadow-large($color)
+  box-shadow: 0 5px 15px rgba($color, .4)
+
+=clearfix
+  &:after
+    clear: both
+    content: ''
+    display: table
+
+=ellipsis
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap
+
+=horizontal-spacing($margin: $m-sm)
+  > *
+    margin-right: $margin
+
+    &:last-child
+      margin-right: 0
+
+=list-unstyled
+  list-style: none
+  padding-left: 0
+
+=vertical-spacing($margin: $m-sm)
+  > *
+    margin-bottom: $margin
+
+    &:last-child
+      margin-bottom: 0
+
+//----- responsive invisible -------------------------------------------------------------------------------------------
+=hidden-xs
+  +media-breakpoint-down(xs)
+    display: none !important
+
+.hidden-xs
+  +hidden-xs
+
+=hidden-sm
+  +media-breakpoint-down(sm)
+    display: none !important
+
+.hidden-sm
+  +hidden-sm
+
+=hidden-md
+  +media-breakpoint-down(md)
+    display: none !important
+
+.hidden-md
+  +hidden-md
+
+=hidden-lg
+  +media-breakpoint-down(lg)
+    display: none !important
+
+.hidden-lg
+  +hidden-lg
+
+=hidden-xl
+  +media-breakpoint-up(xl)
+    display: none !important
+  
+.hidden-xl
+  +hidden-xl

@@ -1,0 +1,43 @@
+@font-face
+  font-family: 'icons'
+  src: asset-url('fonts/icons.woff2') format('woff2'), asset-url('fonts/icons.woff') format('woff')
+  font-weight: normal
+  font-style: normal
+
+=icon-settings
+  display: block
+  font:
+    family: 'icons'
+    size: $m
+    style: normal
+    variant: normal
+    weight: normal
+  line-height: 1
+  speak: none
+  text-transform: none
+  -webkit-font-smoothing: antialiased
+  vertical-align: middle
+
+=icon($name, $content)
+  .#{$icon-class}#{$name},
+  %#{$icon-class}#{$name}
+    &:before
+      content: #{"\"\\"}#{$content + "\""}
+
+[class*=#{$icon-class}]
+  display: inline-block
+  height: $m
+
+  &:active,
+  &:hover,
+  &:focus
+    text-decoration: none
+
+  &:before
+    +icon-settings
+
+  + *,
+  * + &
+    margin-left: $m-sm
+
++icon(test, 'e900')

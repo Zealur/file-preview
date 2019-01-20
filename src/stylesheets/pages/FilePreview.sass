@@ -1,0 +1,75 @@
+.content
+    max-width: 1000px
+    margin: 0 auto
+
+.article-header
+    +box-shadow($color-gray-dark)
+    background: $color-white
+    border-radius: $m-xs
+    margin: $m-sm $m-sm 0 $m-sm
+    padding: $m-sm $m-xl
+    overflow: hidden
+    position: relative
+    *
+        position: relative
+
+.article-title
+    margin-bottom: $m
+    color: $brand-primary
+
+.article-author
+    color: $color-gray-dark
+    text-align: right
+    margin-right: $m-xs
+
+.header__background
+    fill: $brand-secondary
+    opacity: 0.4
+    position: absolute
+    width: 1000px
+    top: -1px
+    left: 0
+
+.references-list
+    display: flex
+    justify-content: flex-end
+    flex-wrap: wrap
+
+.reference-icon
+    margin-right: $m-xxs
+    width: 20px
+    height: 20px
+
+.linkedin-icon
+    fill: #0077B5
+
+.cards
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+
+    .card
+        +box-shadow($color-gray-dark)
+        background: $color-white
+        border-radius: $m-xs
+        flex: 1 0 28% 
+        margin: $m-sm
+        min-width: 200px
+        overflow: hidden
+
+        .code
+            display: block
+            background: $color-gray-dark
+            color: white
+            overflow-wrap: break-word
+
+        &__preview
+            border: 0
+            height: 250px
+            width: 100%
+
+        &__caption
+            text-align: center
+            padding: $m-sm
+
+
