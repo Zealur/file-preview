@@ -13,7 +13,7 @@ body
     position: relative
 
 .article-header
-    height: 280px
+    height: 420px
     display: flex
     flex-flow: column
     justify-content: flex-end
@@ -24,35 +24,61 @@ body
         position: relative
 
 .article-title
-    font-weight: $font-weight-regular
-    text-decoration: underline $brand-accent-1
+    color: $brand-accent-1
     margin-bottom: $m
 
 .article-author
     color: $color-gray-dark
-    text-align: right
     margin-right: $m-xs
+    text-align: right
 
 .article__content
     padding: 0 $m-xl
 
     h3
         color: $brand-accent-2
+        font-size: $font-size-base
+
+    code
+        background-color: $color-gray-light
+        border-radius: $border-radius
+        border: 1px solid $color-gray
+        display: block
+        word-break: break-all
+        padding: $m-xxs $m-sm
+
+    h2
+        color: $brand-accent-2
+        font-size: $font-size-lg
         margin: $m-sm 0
 
     ul
-        margin-left: $m
         list-style: disc
+        margin-left: $m
 
-    .check, .times
+    .check, .times, .question-mark
         fill: $brand-success
-        width: 20px
         height: 20px
-        vertical-align: top
+        margin: 0 $m-xxs
+        vertical-align: top  
+        width: 20px
 
     .times
         fill: $brand-danger
 
+    .question-mark
+        fill: $brand-accent-1
+
+    .small-section
+        margin: $m-xs 0
+
+    .sections-list > li
+        margin-bottom: $m
+
+    .no-bullets
+        margin-left: $m-xs
+        > li
+            list-style: none
 
 hr
     border: none
@@ -84,24 +110,8 @@ hr
     left: 0
     transform: rotate(180deg)
     fill: $brand-secondary
-    opacity: 0.25
+    opacity: .25
     z-index: 0
-
-.header__shape1
-    fill: $brand-secondary
-    position: absolute
-    top: $m-xl * 3
-    left: $m-xl * 2
-    opacity: .15
-
-.header__shape2
-    @extend .header__shape1
-    fill: $brand-secondary
-    transform: rotate(200deg)
-    top: $m-xl * 4
-    left: auto
-    right: $m-xl * 3
-
 
 .references-list
     display: flex
@@ -143,11 +153,6 @@ hr
             text-align: center
             padding: $m-sm
 
-
-
-@keyframes floatX
-    0%
-        transform: translateX(0)
-    100%
-        transform: translateX($m)
-
+@media (max-width: 800px)
+    .article__content, .article-header
+        padding: 0 $m

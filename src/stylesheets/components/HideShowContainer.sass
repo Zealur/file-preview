@@ -1,0 +1,18 @@
+.hide-show-container
+  display: flex
+  justify-content: center
+  padding: $m
+
+  .show-button
+    +box-shadow($color-gray-dark)
+    transition: background-color .3s, box-shadow .3s
+    border: 1px solid $brand-secondary
+    background-color: $brand-secondary
+    color: $color-white
+    border-radius: $m-xs
+    padding: $m-sm $m-lg
+    font-weight: 600
+
+    &:hover
+      +box-shadow-large($color-gray-dark)
+      background-color: $brand-accent-1
