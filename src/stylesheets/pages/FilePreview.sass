@@ -23,6 +23,26 @@ body
     > *
         position: relative
 
+.author
+    align-items: center
+    display: flex
+    flex-flow: column
+    justify-content: center
+    width: 100px
+    position: absolute
+    top: $m-lg * 2.25
+    left: $m-xl
+
+.author-photo
+    border-radius: 50%
+    border: 2px solid $color-gray
+    height: 80px
+    margin-bottom: $m-xs
+    width: 80px
+
+.references-list
+    display: flex
+
 .article-title
     color: $brand-accent-1
     margin-bottom: $m
@@ -112,11 +132,6 @@ hr
     fill: $brand-secondary
     opacity: .25
     z-index: 0
-
-.references-list
-    display: flex
-    justify-content: flex-end
-    flex-wrap: wrap
 
 .reference-icon
     margin-right: $m-xxs

@@ -24,45 +24,44 @@ export default class FilePreview extends Component {
           <h1 className="article-title">
             React file preview - all you need to know
           </h1>
-          <ul className="references-list">
-            <a
-              className="article-author"
-              rel="author"
-              href="https://www.linkedin.com/in/krzysztof-golasik/"
-            >
-              Krzysztof Golasik
-            </a>
-            <li>
-              <a
-                href="https://www.linkedin.com/in/krzysztof-golasik/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <LinkedInIcon className="reference-icon linkedin-icon" />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://selleo.com/people/krzysztof-golasik"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  className="reference-icon"
-                  src="https://selleo.com/favicon.ico"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/Zealur"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GitHubIcon className="reference-icon" />
-              </a>
-            </li>
-          </ul>
+          <div className="author">
+            <img
+              className="author-photo"
+              src="https://s.gravatar.com/avatar/133c1836a37855b7bc319fea21946e98?s=80"
+            />
+            <ul className="references-list">
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/krzysztof-golasik/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LinkedInIcon className="reference-icon linkedin-icon" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://selleo.com/people/krzysztof-golasik"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    className="reference-icon"
+                    src="https://selleo.com/favicon.ico"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/Zealur"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <GitHubIcon className="reference-icon" />
+                </a>
+              </li>
+            </ul>
+          </div>
         </header>
         <hr />
         <section className="article-section">
@@ -72,22 +71,31 @@ export default class FilePreview extends Component {
               This page is made for developers, to present them all the
               information they need about <b>file embedding</b>, and also give
               them opportunity to test each embedding solution on their own -
-              just by openning this site on any device.
+              just by openning this site on any device.{' '}
+              <b>
+                Want even more information? Check out my article:{' '}
+                <a href="#">here</a>
+              </b>
             </p>
             <br />
             <ul>
               <h4>Sections:</h4>
               <li>
-                <a href="#pdf">Embeding PDF file test</a>
+                <a href="#comparison">
+                  Embedded File Viewer: Google Drive, OneDrive, Browser support
+                </a>
               </li>
               <li>
-                <a href="#doc">Embeding DOC file test</a>
+                <a href="#pdf">Embeding PDF files</a>
+              </li>
+              <li>
+                <a href="#doc">Embedding DOC/PPT/XLS files</a>
               </li>
             </ul>
           </div>
           <hr />
           <div className="article__content">
-            <h2>
+            <h2 id="comparison">
               Embedded File Viewer: Google Drive, OneDrive, Browser support
             </h2>
             <p>
@@ -302,7 +310,6 @@ export default class FilePreview extends Component {
               </ul>
             </p>
           </div>
-
           <HideShowContainer>
             <ul className="cards">
               <li className="card">
