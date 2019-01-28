@@ -12,7 +12,8 @@ import { QuestionIcon } from '../components/icons/QuestionIcon'
 const urlToPdf =
   'https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf'
 
-const urlToDoc = 'https://d9db56472fd41226d193-1e5e0d4b7948acaf6080b0dce0b35ed5.ssl.cf1.rackcdn.com/spectools/docs/wd-spectools-word-sample-04.doc'
+const urlToDoc =
+  'https://d9db56472fd41226d193-1e5e0d4b7948acaf6080b0dce0b35ed5.ssl.cf1.rackcdn.com/spectools/docs/wd-spectools-word-sample-04.doc'
 
 export default class FilePreview extends Component {
   render() {
@@ -150,7 +151,7 @@ export default class FilePreview extends Component {
                 <section className="small-section">
                   <b>How to use it ?</b>
                   <code>
-                    http://view.officeapps.live.com/op/view.aspx?src=
+                    https://view.officeapps.live.com/op/view.aspx?src=
                     <b>[URL]</b>
                   </code>
                   Do the same as for Google Docs
@@ -269,7 +270,7 @@ export default class FilePreview extends Component {
               <li className="card">
                 <iframe
                   className="card__preview"
-                  src={`http://view.officeapps.live.com/op/view.aspx?src=${encodeURI(
+                  src={`https://view.officeapps.live.com/op/view.aspx?src=${encodeURI(
                     urlToPdf
                   )}`}
                 />
@@ -328,7 +329,7 @@ export default class FilePreview extends Component {
               <li className="card">
                 <iframe
                   className="card__preview"
-                  src={`http://view.officeapps.live.com/op/view.aspx?src=${encodeURI(
+                  src={`https://view.officeapps.live.com/op/view.aspx?src=${encodeURI(
                     urlToDoc
                   )}`}
                 />
