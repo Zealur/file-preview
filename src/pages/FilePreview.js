@@ -12,7 +12,7 @@ import { QuestionIcon } from '../components/icons/QuestionIcon'
 const urlToPdf =
   'https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf'
 
-const urlToDoc = 'http://www.snee.com/xml/xslt/sample.doc'
+const urlToDoc = 'https://d9db56472fd41226d193-1e5e0d4b7948acaf6080b0dce0b35ed5.ssl.cf1.rackcdn.com/spectools/docs/wd-spectools-word-sample-04.doc'
 
 export default class FilePreview extends Component {
   render() {
