@@ -23,7 +23,7 @@ export default class FilePreview extends Component {
           <Wave3 className="header__wave2" />
           <WaveBackground className="header__background" />
           <h1 className="article-title">
-            React file preview - all you need to know
+            How to preview doc and pdf files in browser
           </h1>
           <div className="author">
             <img
@@ -83,7 +83,8 @@ export default class FilePreview extends Component {
               <h4>Sections:</h4>
               <li>
                 <a href="#comparison">
-                  Embedded File Viewer: Google Drive, OneDrive, Browser support
+                  Embedded File Viewer: Google Drive, OneDrive, HTML inline
+                  embedding
                 </a>
               </li>
               <li>
@@ -97,7 +98,8 @@ export default class FilePreview extends Component {
           <hr />
           <div className="article__content">
             <h2 id="comparison">
-              Embedded File Viewer: Google Drive, OneDrive, Browser support
+              Embedded File Viewer: Google Drive, OneDrive, HTML inline
+              embedding
             </h2>
             <p>
               All this solutions give developers some more opportunity to
@@ -122,7 +124,7 @@ export default class FilePreview extends Component {
                   HTML inline content embedder <i>iframe/embed/object</i>
                 </section>
                 <section className="small-section">
-                  <b>Specification:</b>
+                  <b>Pros:</b>
                   <ul>
                     <li>25MB file limit</li>
                     <li>Many supported file types</li>
@@ -131,10 +133,14 @@ export default class FilePreview extends Component {
                       is very important if you want to make preview on mobile
                       devices too
                     </li>
+                  </ul>
+
+                  <b>Cons:</b>
+                  <ul>
                     <li>
                       <b>It's not supported anymore - throws random errors</b>{' '}
                       for no reason (you can test it out on this site), it's
-                      very problematic because
+                      very problematic, but solvable
                     </li>
                     <li>
                       Sometimes not accurate at parsing Office file types like
@@ -157,18 +163,21 @@ export default class FilePreview extends Component {
                   Do the same as for Google Docs
                 </section>
                 <section className="small-section">
-                  <b>Specification:</b>
+                  <b>Pros:</b>
+                  <ul>
+                    <li>
+                      Faster loading speed, at least faster than Google Docs
+                    </li>
+                    <li>Always displays - no random errors</li>
+                    <li>Accurate .docs and .ppts parser</li>
+                  </ul>
+                  <b>Cons:</b>
                   <ul>
                     <li>
                       Supports only Microsoft Office file types: .ppt(x),
                       .doc(x), xls(x)
                     </li>
                     <li>10MB limit for docs/ppts, 5MB for xls</li>
-                    <li>
-                      Faster loading speed, at least faster than Google Docs
-                    </li>
-                    <li>Always displays - no random errors</li>
-                    <li>Accurate .docs and .ppts parser</li>
                     <li>
                       <b>Low (or none) support for mobiles,</b> throws errors,
                       doesn't display anthing, it's not responsive below ~700px
@@ -179,7 +188,7 @@ export default class FilePreview extends Component {
               </li>
               <li>
                 <div>
-                  <h3>Browser file embedding:</h3>
+                  <h3>HTML inline embedding:</h3>
                 </div>
                 <section className="small-section">
                   <b>How to use it ?</b>
@@ -187,18 +196,22 @@ export default class FilePreview extends Component {
                   Just paste direct url into your HTML content embeder
                 </section>
                 <section className="small-section">
-                  <b>Specification:</b>
+                  <b>Pros:</b>
                   <ul>
                     <li>
-                      <b>Only pdf support</b>
-                    </li>
-                    <li>
-                      <b>Works only on desktop browsers: </b> Chrome, Firefox,
-                      Safari, Opera, Edge, IE8+
+                      <b>Works on almost every desktop browser: </b> Chrome,
+                      Firefox, Safari, Opera, Edge, IE8+
                     </li>
                     <li>No file size limitations</li>
                     <li>Loading time the best from the list</li>
                     <li>No errors</li>
+                  </ul>
+                  <b>Cons:</b>
+                  <ul>
+                    <li>
+                      <b>Only pdf support</b>
+                    </li>
+                    <li>Doesn't work on mobiles</li>
                   </ul>
                 </section>
               </li>
@@ -208,7 +221,10 @@ export default class FilePreview extends Component {
                   <li>
                     Use default browser embedder for .pdf file types on desktops
                   </li>
-                  <li>For every other case use Google Docs</li>
+                  <li>
+                    For every other case use Google Docs, check how to deal with
+                    those random erros: <a href="#">here</a>
+                  </li>
                   <li>
                     If you really want to optimize your file embedding you might
                     consider using Office Apps for Office file types but also I
