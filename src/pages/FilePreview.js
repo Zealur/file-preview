@@ -75,7 +75,9 @@ export default class FilePreview extends Component {
               just by openning this site on any device.{' '}
               <b>
                 Want even more information? Check out my article:{' '}
-                <a href="#">here</a>
+                <a href="https://selleo.com/blog/how-to-preview-doc-and-pdf-files-in-browser">
+                  here
+                </a>
               </b>
             </p>
             <br />
@@ -223,7 +225,10 @@ export default class FilePreview extends Component {
                   </li>
                   <li>
                     For every other case use Google Docs, check how to deal with
-                    those random erros: <a href="#">here</a>
+                    those random erros:{' '}
+                    <a href="https://selleo.com/blog/how-to-preview-doc-and-pdf-files-in-browser">
+                      here
+                    </a>
                   </li>
                   <li>
                     If you really want to optimize your file embedding you might
